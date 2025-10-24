@@ -1,0 +1,59 @@
+@import '../../assests/scss/variable';
+
+.device-summary-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    @media only screen and (max-width: 991px) {
+        flex-wrap: wrap;
+    }
+}
+.device-left-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 767px) {
+        gap: 6px;
+    }
+}
+.device-more-actions {
+    @media only screen and (max-width: 991px) {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.tag-with-value {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid rgb(25, 105, 191, .20);
+    font-size: 15px;
+    color: #33333B;
+    padding: 13px 25px;
+    border-radius: 5px;
+    @media only screen and (max-width: 1366px) {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 10px 15px;
+        gap: 16px;
+        font-size: 13px;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 6px 5px;
+        gap: 8px;
+        font-size: 12px;
+    }
+    .stat-value {
+        font-weight: 700;
+        color: $primary;
+        font-size: 19px;
+        @media only screen and (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+}

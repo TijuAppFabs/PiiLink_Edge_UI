@@ -1,0 +1,56 @@
+.tag {
+    font-size: 12px;
+    color: #7C827E;
+
+    @media only screen and (max-width: 769px) {
+        font-size: 11px;
+    }
+
+    &.text {
+        color: #7C827E;
+    }
+
+    &.pillow {
+        padding: 2px 7px;
+        color: #050505;
+        font-weight: 500;
+        background-color: #EEF0F4;
+        border-radius: 6px;
+
+        &.green {
+            background-color: rgba(52, 199, 89, 0.1);
+            color: #34C759;
+        }
+
+        &.red {
+            background-color: rgba(179, 38, 30, 0.1);
+            color: #b3261e;
+        }
+
+        &.gray {
+            background-color: #EEF0F4;
+            color: #050505;
+        }
+
+        &.locked {
+            background-color: rgba(255, 56, 60, 0.1);
+            color: #FF383C;
+        }
+
+        &.antiquewhite {
+            background-color: #e5d091;
+            color: #050505;
+        }
+    }
+
+    img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+    }
+}
+
+.dash-card-status {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,82 @@
+$editor-bg: #1e1e1e;
+$editor-text: #ffffff;
+$editor-font: monospace;
+$editor-radius: 6px;
+
+.deviceprofile-container {
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .btn-primary {
+    margin-bottom: 15px;
+  }
+}
+
+.action-buttons {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.editor-modal {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  .editor-textarea {
+    flex: 1;
+    background-color: $editor-bg;
+    color: $editor-text;
+    font-family: $editor-font;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: $editor-radius;
+    resize: none;
+    outline: none;
+  }
+
+  .editor-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f1f5f9; // light hover
+    }
+
+    &.selected-row {
+      background-color: #dbeafe; // blue for selected row
+      font-weight: 600;
+      border-left: 4px solid #2563eb;
+    }
+  }
+
+  td,
+  th {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+  }
+}

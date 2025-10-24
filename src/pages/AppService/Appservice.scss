@@ -1,0 +1,85 @@
+
+
+.app-service-container {
+  width: 100%;
+  padding: 20px;
+
+  .nav-tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #e5e5e5;
+
+    .nav-item {
+      flex: 1;
+      text-align: center;
+
+      .nav-link {
+        width: 100%;
+        font-weight: 600;
+        padding: 12px 0;
+        border: none;
+        border-radius: 0;
+        color: #333;
+
+        &.active {
+          background: #f8f9fa;
+          border-bottom: 2px solid #007bff;
+          color: #007bff;
+        }
+      }
+    }
+  }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  align-items: stretch; 
+}
+
+.app-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100%; // ✅ card fills the grid cell completely
+
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #007bff;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  .card-actions {
+    margin-top: auto; // ✅ push actions to bottom of card
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  pre {
+    max-height: 120px; // ✅ limit JSON height
+    overflow-y: auto;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+}

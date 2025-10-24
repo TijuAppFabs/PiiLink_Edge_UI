@@ -1,0 +1,30 @@
+.table-top-actions {
+    display: flex;
+    gap: 20px;
+    @media only screen and (max-width: 991px) {
+        padding-top: 5px;
+    }
+    > button {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        > img {
+            @media only screen and (max-width: 991px) {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+            }
+        }
+        &.filter-btn {
+            padding: 10px 16px;
+            gap: 8px;
+            font-size: 14px;
+            color: #344054;
+            font-weight: 500;
+            @media only screen and (max-width: 991px) {
+                padding: 6px 6px;
+                gap: 6px;
+            }
+        }
+    }
+}

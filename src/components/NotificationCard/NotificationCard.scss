@@ -1,0 +1,81 @@
+.notifcation-card {
+    border:1px solid #E2E8F0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    transition: .3s all;
+    display: flex;
+    color: #404040;
+    text-decoration: none;
+    &:hover {
+        border-color: #1969BF;
+    }
+    &:not(:last-child) {
+        margin-bottom: 15px;
+        @media only screen and (max-width: 991px) {
+            margin-bottom: 8px;
+        }
+    }
+    .notifcation-card-inner {
+        border-left: 5px solid #FF7A7A;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .notifcation-card-icon {
+        padding: 0 18px;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 991px) {
+            padding: 0 10px;
+        }
+        @media only screen and (max-width: 375px) {
+            display: none;
+        }
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            @media only screen and (max-width: 991px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .notifcation-card-content {
+        flex-grow: 1;
+        @media only screen and (max-width: 375px) {
+            padding-left: 10px;
+        }
+        h4, p {
+            margin: 0;
+        }
+        h4 {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        p {
+            color: #8C8C8C;
+            font-size: 12px;
+        }
+        .notification-time {
+            padding-top: 5px;
+            color: #404040;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+    }
+}
+.noti-actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+.noti-time {
+    @media only screen and (max-width: 767px) {
+        flex: 0 0 100%;
+    }
+}

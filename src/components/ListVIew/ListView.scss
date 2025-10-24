@@ -1,0 +1,266 @@
+.list-view-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+
+    @media only screen and (max-width: 1366px) {
+        padding: 12px 15px;
+    }
+
+    @media only screen and (max-width: 575px) {
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin: 0;
+
+        @media only screen and (max-width: 767px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .list-view-item-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 350px) {
+            display: none;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+
+            @media only screen and (max-width: 575px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .list-view-header {
+        display: flex;
+        gap: 7px;
+
+        @media only screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            padding-bottom: 5px;
+        }
+
+        .d-flex {
+            @media only screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .list-view-item-content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 991px) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    .list-view-item-informations {
+        @media only screen and (max-width: 991px) {
+            flex-grow: 1;
+        }
+    }
+
+    .device-description {
+        color: #8C8C8C;
+    }
+
+    .device-status-row {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 3px;
+
+        .device-status-item {
+            position: relative;
+
+            &:not(:last-child) {
+                padding-right: 10px;
+                margin-right: 10px;
+
+                &:after {
+                    content: "";
+                    width: 1px;
+                    height: 17px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #B3B3B3;
+                }
+            }
+        }
+    }
+
+    .list-view-item-actions {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &.selected {
+        background-color: #e6f2ff;
+        border: 1px solid #007bff;
+    }
+}
+
+.settings-details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 15px;
+
+    @media only screen and (max-width: 1366px) {
+        padding: 12px 15px;
+    }
+
+    @media only screen and (max-width: 575px) {
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    h3 {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .settings-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 200px;
+
+            label {
+                font-size: 14px;
+                margin-bottom: 5px;
+                color: #3F4763;
+            }
+
+            input,
+            select {
+                padding: 8px 10px;
+                border: 1px solid #E2E8F0;
+                border-radius: 5px;
+                font-size: 14px;
+                color: #3F4763;
+                background-color: #fff;
+            }
+        }
+
+        button.btn-primary {
+            align-self: flex-end;
+            padding: 8px 16px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.scheduler-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .scheduler-left {
+        flex-shrink: 0;
+
+        .scheduler-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .scheduler-middle {
+        flex: 1;
+        margin-left: 16px;
+
+        .scheduler-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a202c;
+            margin: 0 0 4px;
+        }
+
+        .scheduler-sub {
+            font-size: 13px;
+            color: #4a5568;
+
+            span {
+                font-weight: 500;
+                color: #2d3748;
+            }
+        }
+    }
+
+    .scheduler-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .btn-primary {
+            padding: 6px 14px;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.scheduler-card.active {
+    background-color: #e6f2ff;
+    border: 1px solid #007bff;
+}
+
+.device-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.device-info-row p {
+    min-width: 150px;
+    margin: 4px 0;
+    font-size: 14px;
+    color: #4B5563;
+
+    strong {
+        color: #1A202C;
+    }
+}

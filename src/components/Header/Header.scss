@@ -1,0 +1,270 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #DBDBDB;
+    z-index: 99;
+    background-color: white;
+}
+nav {
+    &.nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 14px 30px;
+        @media only screen and (max-width: 575px) {
+            padding: 9px 15px;
+        }
+        .nav-brand-with-toggle {
+            flex: 0 0 200px;
+            max-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .5s all ease;
+            @media only screen and (max-width: 767px) {
+                flex: 0 0 80px;
+                max-width: 80px;
+            }
+            @media only screen and (max-width: 575px) {
+                flex: 0 0 70px;
+                max-width: 70px;
+            }
+            @media only screen and (max-width: 375px) {
+                flex: 0 0 60px;
+                max-width: 60px;
+            }
+        }
+        .nav-toggle-btn {
+            display: flex;
+            width: 26px;
+            height: 20px;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: .3s all;
+            }
+        }
+        .nav-profile {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 35px;
+            @media only screen and (max-width: 575px) {
+                gap: 16px;
+            }
+            @media only screen and (max-width: 375px) {
+                gap: 8px;
+            }
+        }
+        .data-status-with-reload {
+            display: flex;
+            align-items: center;
+            padding-left: 46px;
+            @media only screen and (max-width: 575px) {
+                padding-left: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            @media only screen and (max-width: 75px) {
+                padding-left: 10px;
+            }
+        }
+        .data-status {
+            color: #AFAFAF;
+            font-size: 11px;
+            padding-right: 7px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            &:before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: #0EBC19;
+                display: block;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.reload-btn {
+    border: 1px solid #E5E5E5;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    @media only screen and (max-width: 575px) {
+        font-size: 11px;
+    }
+    @media only screen and (max-width: 375px) {
+        font-size: 10px;
+    }
+}
+.notification-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    padding: 0;
+    @media only screen and (max-width: 375px) {
+        width: 20px;
+        height: 20px;
+    }
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.nav-profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 16px;
+    color: #0D062D;
+    @media only screen and (max-width: 991px) {
+        gap: 12px;
+        font-size: 14px;
+    }
+    @media only screen and (max-width: 575px) {
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 375px) {
+        gap: 6px;
+        padding: 0;
+    }
+    > div {
+        text-align: end;
+        > span {
+            padding-top: 3px;
+            display: block;
+            font-size: 14px;
+            color: #787486;
+            @media only screen and (max-width: 991px) {
+                font-size: 12px;
+                padding-top: 1px;
+            }
+            @media only screen and (max-width: 575px) {
+                font-size: 11px;
+            }
+        }
+    }
+    img {
+        transition: .3s all;
+    }
+}
+.notification-wrapper {
+    position: relative;
+}
+.notification-dropdown {
+    padding: 36px 26px 26px;
+    border: 1px solid #E2E8F0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    width: 446px;
+    position: absolute;
+    right: 0;
+    background: white;
+    top: 30px;
+    border-radius: 4px;
+    max-height: 700px;
+    overflow-y: auto;
+    @media only screen and (max-width: 991px) {
+        padding: 26px 20px 20px;
+        width: 375px;
+    }
+    @media only screen and (max-width: 575px) {
+        position: fixed;
+        z-index: 9;
+        top: 50px;
+        right: 35px;
+        width: calc(100% - 70px);
+        max-height: calc(100% - 70px);
+    }
+    @media only screen and (max-width: 575px) {
+        right: 20px;
+        width: calc(100% - 40px);
+        max-height: calc(100% - 40px);
+        padding: 18px 15px 16px;
+    }
+}
+.notification-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+.profile-dropdown {
+    position: relative;
+}
+.profile-dropdown-wrapper {
+    position: absolute;
+    right: 0;
+    background: white;
+    top: 42px;
+    border-radius: 4px;
+    border: 1px solid #E2E8F0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    @media only screen and (max-width: 575px) {
+        padding: 15px;
+    }
+}
+.logo-collapsed {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    @media only screen and (max-width: 375px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+body {
+    &.toggle-active {
+        nav {
+            &.nav-bar {
+                .nav-brand-with-toggle {
+                    flex: 0 0 80px;
+                    max-width: 80px;
+                    @media only screen and (max-width: 575px) {
+                        flex: 0 0 70px;
+                        max-width: 70px;
+                    }
+                    @media only screen and (max-width: 375px) {
+                        flex: 0 0 60px;
+                        max-width: 60px;
+                    }
+                }
+                .nav-toggle-btn {
+                    > img {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+    }
+}
+.logo-expanded {
+    &.mobile {
+        display: none;
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        @media only screen and (max-width: 767px) {
+            display: block;
+        }
+        @media only screen and (max-width: 375px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &.desktop {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

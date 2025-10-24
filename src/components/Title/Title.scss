@@ -1,0 +1,30 @@
+.page-title {
+    padding-bottom: 30px;
+    @media only screen and (max-width: 1366px) {
+        padding-bottom: 25px;
+    }
+    @media only screen and (max-width: 991px) {
+        padding-bottom: 16px;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: -.02px;
+        color: #000000;
+        margin: 0;
+        line-height: 1.2;
+        padding-bottom: 5px;
+        @media only screen and (max-width: 1366px) {
+            font-size: 27px;
+            padding-bottom: 3px;
+        }
+        @media only screen and (max-width: 991px) {
+            font-size: 24px;
+        }
+    }
+    p {
+        color: #6B6868;
+        font-size: 12px;
+        margin: 0;
+    }
+}

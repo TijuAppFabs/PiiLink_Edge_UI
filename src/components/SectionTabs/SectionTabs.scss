@@ -1,0 +1,48 @@
+@import '../../assests/scss/variable';
+.section-tabs {
+    border: 1px solid #D0E1F8;
+    background: #E2E8F0;
+    padding: 10px 16px;
+    border-radius: 5px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    // margin-bottom: 26px;
+}
+.section-tab-btn {
+    padding: 6px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #404040;
+    transition: .3s all;
+    border: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    @media only screen and (max-width: 1366px) {
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 575px) {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    &.active, &:hover {
+        color: white;
+        background-color: $primary;
+        //font-weight: 600;
+    }
+}
+.style-2 {    
+    &.section-tabs {
+        padding: 10px;
+        border-radius: 45px;
+        display: inline-flex;
+    }
+    .section-tab-btn {
+        border-radius: 36px;
+        color: black;
+        &.active, &:hover {
+            color: white;
+            background-color: $primary;
+        }
+    }
+}

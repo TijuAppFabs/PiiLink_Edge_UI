@@ -1,0 +1,46 @@
+// .app-wrapper {
+//     min-height: 100vh;
+// }
+.wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.page-content {
+    background-color: #F9FAFB;
+    flex:  0 0 calc(100% - 251px);
+    height: calc(100vh - 76px);
+    transition: .5s all ease;
+    max-width: calc(100% - 251px);
+    @media only screen and (max-width: 991px) {
+        flex:  0 0 calc(100% - 230px);
+        height: calc(100vh - 64px);
+        max-width: calc(100% - 230px);
+    }
+    @media only screen and (max-width: 575px) {
+        flex:  0 0 calc(100% - 64px);
+        height: calc(100vh - 57px);
+        max-width: calc(100% - 64px);
+    }
+}
+.page-content-inner {
+    height: calc(100vh - 112px);
+    padding: 30px 20px 30px;
+    @media only screen and (max-width: 991px) {
+        padding: 30px 15px 30px 20px;
+        height: calc(100vh - 100px);
+    }
+    @media only screen and (max-width: 575px) {
+        height: calc(100vh - 102px);
+    }
+}
+.page-content-body {
+    height: 100%;    
+    overflow: auto;
+    padding-right: 10px;
+}
+.toggle-active {
+    .page-content {
+        flex:  0 0 calc(100% - 64px);
+        max-width: calc(100% - 64px);
+    }
+}
